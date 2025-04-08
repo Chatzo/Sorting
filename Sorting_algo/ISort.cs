@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sorting_algo
 {
-    public interface ISort
+    public interface ISort<T>
     {
-        T[] Sort<T>(T[] array);
+        T[] Sort(T[] unsorted);
     }
 }

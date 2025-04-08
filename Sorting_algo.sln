@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting_algo", "Sorting_algo\Sorting_algo.csproj", "{5494C90E-8C59-4AE7-90F4-665F4323F3FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting_algo_Tests", "Sorting_algo_Tests\Sorting_algo_Tests.csproj", "{E02900B8-15F4-4EDF-8F1A-D8396D5DCA01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5494C90E-8C59-4AE7-90F4-665F4323F3FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5494C90E-8C59-4AE7-90F4-665F4323F3FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5494C90E-8C59-4AE7-90F4-665F4323F3FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5494C90E-8C59-4AE7-90F4-665F4323F3FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E02900B8-15F4-4EDF-8F1A-D8396D5DCA01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E02900B8-15F4-4EDF-8F1A-D8396D5DCA01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E02900B8-15F4-4EDF-8F1A-D8396D5DCA01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E02900B8-15F4-4EDF-8F1A-D8396D5DCA01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1F89F30-2423-406E-B8E9-057AC2A64613}
+	EndGlobalSection
+EndGlobal

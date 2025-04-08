@@ -2,83 +2,57 @@ using System.Collections.Immutable;
 using Sorting_algo;
 namespace Sorting_algo_Tests
 {
-    public class BubbleSortTest
+    public class BubbleSortTest : BaseSortTest
     {
-        private ISort<int> sorter = new BubbleSort();
-        [Theory]
-        //(arraysize, lowerBound, upperbound)
-        [InlineData(100, 1, 100)]
-        [InlineData(1000, 1, 100)]
-        [InlineData(1000, 1, 1000)]
-        public void RandomArray(int arraySize, int lowerBound, int upperBound)
+        protected override ISort<int> Sorter => new BubbleSort();
+        [Fact]
+        protected void BubbleSort_EmptyArray_Test()
         {
-            int[] unsorted = TestHelpers.GenerateRandomArray(arraySize, lowerBound, upperBound);
-            //call the sorting algoritm
-            int[] sorted = sorter.Sort(unsorted); 
-
-            //generate the expected reults
-            int[] expected = (int[])unsorted.Clone(); //create a seperate copy to avoid manipulating unsorted
-            Array.Sort(expected);
-
-            Assert.Equal(expected, sorted);
+            base.EmptyArray_Test();
+        }
+        [Fact]
+        protected void BubbleSort_SingleElementArray_Test()
+        {
+            base.SingleElementArray_Test();
+        }
+        [Fact]
+        protected void BubbleSort_IdenticalElements_Test()
+        {
+            base.IdenticalElements_Test();
         }
         [Theory]
-        //(arraysize, lowerBound, upperbound)
-        [InlineData(100, 1, 100)]
-        [InlineData(1000, 1, 100)]
+        [InlineData(100, 1, 10)]
         [InlineData(1000, 1, 1000)]
-        public void SequentialArrayWithWrapping(int arraySize, int lowerBound, int upperBound)
+        public void BubbleSort_RandomArray_Test(int arraySize, int lowerBound, int upperBound)
         {
-            int[] unsorted = TestHelpers.GenerateSequentialArrayWithWrapping(arraySize, lowerBound, upperBound);
-            //call the sorting algoritm
-            int[] sorted = sorter.Sort(unsorted);
+            base.RandomArray_Test(arraySize,lowerBound,upperBound);
+        }
 
-            //generate the expected reults
-            int[] expected = (int[])unsorted.Clone(); //create a seperate copy to avoid manipulating unsorted
-            Array.Sort(expected);
-
-            Assert.Equal(expected, sorted);
+        [Theory]
+        [InlineData(100, 1, 10)]
+        [InlineData(1000, 1, 1000)]
+        public void BubbleSort_SequentialArrayWithWrapping_Test(int arraySize, int lowerBound, int upperBound)
+        {
+            base.SequentialArrayWithWrapping_Test(arraySize, lowerBound, upperBound);
         }
         [Theory]
-        //(numerOfTest, arraysize, lowerBound, upperbound)
-        [InlineData(1000, 100, 1, 10)]
-        [InlineData(1000, 10, 1, 10)]
         [InlineData(1000, 100, 0, 100)]
-        public void MultipleRandomArrays(int numberOfTests, int arraySize, int lowerBound, int upperBound)
+        [InlineData(1000, 100, 1, 100)]
+        public void BubbleSort_MultipleRandomArrays_Test(int numberOfTests, int arraySize, int lowerBound, int upperBound)
         {
             for(int i = 0; i < numberOfTests; i++)
             {
-                int[] unsorted = TestHelpers.GenerateRandomArray(arraySize, lowerBound, upperBound);
-                //call the sorting algoritm
-                int[] sorted = sorter.Sort(unsorted);
-
-                //generate the expected reults
-                int[] expected = (int[])unsorted.Clone(); //create a seperate copy to avoid manipulating unsorted
-                Array.Sort(expected);
-
-                Assert.Equal(expected, sorted);
-
+                base.RandomArray_Test(arraySize, lowerBound, upperBound);
             }
         }
         [Theory]
-        //(numerOfTest, arraysize, lowerBound, upperbound)
-        [InlineData(1000, 100, 1, 10)]
-        [InlineData(1000, 10, 1, 10)]
         [InlineData(1000, 100, 0, 100)]
-        public void MultipleSequentialArraysWithWrapping(int numberOfTests, int arraySize, int lowerBound, int upperBound)
+        [InlineData(1000, 100, 1, 100)]
+        public void BubbleSort_MultipleSequentialArraysWithWrapping_Test(int numberOfTests, int arraySize, int lowerBound, int upperBound)
         {
             for (int i = 0; i < numberOfTests; i++)
             {
-                int[] unsorted = TestHelpers.GenerateSequentialArrayWithWrapping(arraySize, lowerBound, upperBound);
-                //call the sorting algoritm
-                int[] sorted = sorter.Sort(unsorted);
-
-                //generate the expected reults
-                int[] expected = (int[])unsorted.Clone(); //create a seperate copy to avoid manipulating unsorted
-                Array.Sort(expected);
-
-                Assert.Equal(expected, sorted);
-
+                base.SequentialArrayWithWrapping_Test(arraySize, lowerBound, upperBound);
             }
         }
     }

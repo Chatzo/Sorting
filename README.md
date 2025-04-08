@@ -1,2 +1,4 @@
 # Sorting_algo
-A few sorting algorithms
+Creating a few sorting algorithms with Test driven development
+
+

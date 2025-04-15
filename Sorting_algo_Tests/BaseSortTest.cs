@@ -77,8 +77,8 @@ namespace Sorting_algo_Tests
         {
             int[] unsorted = TestHelpers.GenerateRandomArray(1000, 1, 1000);
             Array.Sort(unsorted); //sorting the array with built in sort before testing
-            Array.Reverse(unsorted);
             int[] expected = (int[])unsorted.Clone(); //create a seperate copy to avoid manipulating unsorted
+            Array.Reverse(unsorted);
             int[] sorted = Sorter.Sort(unsorted); //call the sorting algoritm
 
             Assert.Equal(expected, sorted);

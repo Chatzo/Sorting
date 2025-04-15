@@ -10,7 +10,27 @@ namespace Sorting_algo
     {
         public int[] Sort(int[] unsorted)
         {
-            throw new NotImplementedException();
+            bool swap;
+            for (int i = 0; i <unsorted.Length - 1; i++)
+            {
+                int smallestIndex = i;
+                swap = false;
+                for (int j = i; j < unsorted.Length - 1; j++)
+                {
+                    if (unsorted[j + 1] < unsorted[smallestIndex])
+                    {
+                        smallestIndex = j + 1;
+                        swap = true;
+                    }
+                }
+                if (swap)
+                {
+                    int temp = unsorted[i];
+                    unsorted[i] = unsorted[smallestIndex];
+                    unsorted[smallestIndex] = temp;
+                }
+            }
+            return unsorted;
         }
     }
 }

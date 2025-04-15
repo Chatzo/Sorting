@@ -25,6 +25,7 @@ namespace Sorting_algo_Tests
         {
             base.NegativeNumbers_Test();
         }
+        [Fact]
         protected void BubbleSort_NumbersWithZero_Test()
         {
             base.NumbersWithZero_Test();
@@ -67,12 +68,12 @@ namespace Sorting_algo_Tests
                 base.SequentialArrayWithWrapping_Test(arraySize, lowerBound, upperBound);
             }
         }
-
+        [Fact]
         protected void BubbleSort_SortedArray_Test()
         {
             base.SortedArray_Test();
         }
-
+        [Fact]
         protected void BubbleSort_ReverseSortedArray_Test()
         {
             base.ReverseSortedArray_Test();

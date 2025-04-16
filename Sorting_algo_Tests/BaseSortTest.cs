@@ -23,6 +23,7 @@ namespace Sorting_algo_Tests
             int[] unsorted = { 1 };
             int[] sorted = Sorter.Sort(unsorted);
             Assert.Single(sorted);
+            Assert.Equal(1, sorted[0]);
         }
         protected void IdenticalElements_Test()
         {
@@ -34,14 +35,19 @@ namespace Sorting_algo_Tests
         protected void NegativeNumbers_Test()
         {
             int[] unsorted = { -2, 3, -5, 2, -7, -5  };
+            int[] expected = (int[])unsorted.Clone();
+            Array.Sort(expected);
             int[] sorted = Sorter.Sort(unsorted);
-            Assert.Equal(unsorted, sorted);
+            Assert.Equal(expected, sorted);
         }
         protected void NumbersWithZero_Test()
         {
             int[] unsorted = { 0, 3, 0, 2, 5, 0, 8, 7, 0 };
+            int[] expected = (int[])unsorted.Clone();
+            Array.Sort(expected);
             int[] sorted = Sorter.Sort(unsorted);
-            Assert.Equal(unsorted, sorted);
+           
+            Assert.Equal(expected, sorted);
         }
 
         protected void RandomArray_Test(int arraySize, int lowerBound, int upperBound)

@@ -11,9 +11,10 @@ namespace Sorting_algo
         public int[] Sort(int[] unsorted)
         {
             bool swap;
+            int smallestIndex;
             for (int i = 0; i <unsorted.Length - 1; i++)
             {
-                int smallestIndex = i;
+                smallestIndex = i;
                 swap = false;
                 for (int j = i; j < unsorted.Length - 1; j++)
                 {

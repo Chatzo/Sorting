@@ -4,9 +4,9 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Sorting_algo;
+using Sorting;
 
-namespace Sorting_algo_Tests
+namespace Sorting_Tests
 {
     public abstract class BaseSortTest
     {

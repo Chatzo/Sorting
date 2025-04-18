@@ -1,4 +1,4 @@
-﻿namespace Sorting_algo
+﻿namespace Sorting
 {
     internal class Program
     {

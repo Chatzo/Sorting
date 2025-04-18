@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting_algo", "Sorting_algo\Sorting_algo.csproj", "{5494C90E-8C59-4AE7-90F4-665F4323F3FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "Sorting_algo\Sorting.csproj", "{5494C90E-8C59-4AE7-90F4-665F4323F3FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting_algo_Tests", "Sorting_algo_Tests\Sorting_algo_Tests.csproj", "{E02900B8-15F4-4EDF-8F1A-D8396D5DCA01}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingTests", "Sorting_algo_Tests\SortingTests.csproj", "{E02900B8-15F4-4EDF-8F1A-D8396D5DCA01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

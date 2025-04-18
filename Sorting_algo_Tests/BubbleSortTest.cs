@@ -1,6 +1,6 @@
 using System.Collections.Immutable;
-using Sorting_algo;
-namespace Sorting_algo_Tests
+using Sorting;
+namespace Sorting_Tests
 {
     public class BubbleSortTest : BaseSortTest
     {
@@ -85,7 +85,7 @@ namespace Sorting_algo_Tests
         [InlineData(100000)]
         protected void BubbleSort_MinMaxArray_Test(int arraySize)
         {
-            RandomArray_Test(arraySize, int.MinValue, int.MaxValue);
+            MinMaxArray_Test(arraySize);
         }
     }
 }

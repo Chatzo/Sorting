@@ -7,32 +7,31 @@ using System.Threading.Tasks;
 
 namespace Sorting_Tests
 {
-    public class SelectionSortTest : BaseSortTest
+    public class HeapSortTest : BaseSortTest
     {
-        protected override ISort<int> Sorter => new SelectionSort();
-
+        protected override ISort<int> Sorter => new HeapSort();
         [Fact]
-        protected void SelectionSort_EmptyArray_Test()
+        protected void HeapSort_EmptyArray_Test()
         {
             base.EmptyArray_Test();
         }
         [Fact]
-        protected void SelectionSort_SingleElementArray_Test()
+        protected void HeapSort_SingleElementArray_Test()
         {
             base.SingleElementArray_Test();
         }
         [Fact]
-        protected void SelectionSort_IdenticalElements_Test()
+        protected void HeapSort_IdenticalElements_Test()
         {
             base.IdenticalElements_Test();
         }
         [Fact]
-        protected void SelectionSort_NegativeNumbers_Test()
+        protected void HeapSort_NegativeNumbers_Test()
         {
             base.NegativeNumbers_Test();
         }
         [Fact]
-        protected void SelectionSort_NumbersWithZero_Test()
+        protected void HeapSort_NumbersWithZero_Test()
         {
             base.NumbersWithZero_Test();
         }
@@ -40,7 +39,7 @@ namespace Sorting_Tests
         [InlineData(100, 1, 10)]
         [InlineData(1000, 1, 1000)]
         [InlineData(10000, 1, 1000)]
-        public void SelectionSort_RandomArray_Test(int arraySize, int lowerBound, int upperBound)
+        public void HeapSort_RandomArray_Test(int arraySize, int lowerBound, int upperBound)
         {
             base.RandomArray_Test(arraySize, lowerBound, upperBound);
         }
@@ -49,7 +48,7 @@ namespace Sorting_Tests
         [InlineData(100, 1, 10)]
         [InlineData(1000, 1, 1000)]
         [InlineData(10000, 1, 1000)]
-        public void SelectionSort_SequentialArrayWithWrapping_Test(int arraySize, int lowerBound, int upperBound)
+        public void HeapSort_SequentialArrayWithWrapping_Test(int arraySize, int lowerBound, int upperBound)
         {
             base.SequentialArrayWithWrapping_Test(arraySize, lowerBound, upperBound);
         }
@@ -57,7 +56,7 @@ namespace Sorting_Tests
         [InlineData(1000, 10, 1, 100)]
         [InlineData(1000, 100, 1, 100)]
         [InlineData(1000, 100, 1, 1000)]
-        public void SelectionSort_MultipleRandomArrays_Test(int numberOfTests, int arraySize, int lowerBound, int upperBound)
+        public void HeapSort_MultipleRandomArrays_Test(int numberOfTests, int arraySize, int lowerBound, int upperBound)
         {
             for (int i = 0; i < numberOfTests; i++)
             {
@@ -67,7 +66,7 @@ namespace Sorting_Tests
         [Theory]
         [InlineData(1000, 100, 0, 100)]
         [InlineData(1000, 100, 1, 100)]
-        public void SelectionSort_MultipleSequentialArraysWithWrapping_Test(int numberOfTests, int arraySize, int lowerBound, int upperBound)
+        public void HeapSort_MultipleSequentialArraysWithWrapping_Test(int numberOfTests, int arraySize, int lowerBound, int upperBound)
         {
             for (int i = 0; i < numberOfTests; i++)
             {
@@ -75,12 +74,12 @@ namespace Sorting_Tests
             }
         }
         [Fact]
-        protected void SelectionSort_SortedArray_Test()
+        protected void HeapSort_SortedArray_Test()
         {
             base.SortedArray_Test();
         }
         [Fact]
-        protected void SelectionSort_ReverseSortedArray_Test()
+        protected void HeapSort_ReverseSortedArray_Test()
         {
             base.ReverseSortedArray_Test();
         }
@@ -89,7 +88,7 @@ namespace Sorting_Tests
         [InlineData(1000)]
         [InlineData(10000)]
         [InlineData(100000)]
-        protected void SelectionSort_MinMaxArray_Test(int arraySize)
+        protected void HeapSort_MinMaxArray_Test(int arraySize)
         {
             MinMaxArray_Test(arraySize);
         }

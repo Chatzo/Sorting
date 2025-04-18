@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sorting_algo_Tests
+namespace Sorting_Tests
 {
     public static class TestHelpers
     {

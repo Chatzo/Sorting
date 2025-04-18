@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sorting_algo
+namespace Sorting
 {
     /// <summary>
     /// In-place quick sort
@@ -26,29 +26,7 @@ namespace Sorting_algo
             if (startHead >= startTail)
                 return unsorted;
 
-            int first = unsorted[startHead];
-            int middle = unsorted[(startHead + startTail) / 2];
-            int last = unsorted[startTail];
-            //picking the pivot with median of three
-            int pivot;
-            if (first > middle)
-            {
-                if (middle > last)
-                    pivot = middle;  // first > middle > last 
-                else if (first > last)
-                    pivot = last;    // first > last > middle
-                else
-                    pivot = first;   // last > first > middle
-            }
-            else
-            {
-                if (first > last)
-                    pivot = first;   // middle > first > last
-                else if (middle > last)
-                    pivot = last;    // middle > last > first
-                else
-                    pivot = middle;  // last > middle > first
-            }
+            int pivot = GetMedianOfThree(unsorted, startHead, startTail);
 
             int temp;
             int head = startHead;
@@ -81,6 +59,32 @@ namespace Sorting_algo
             QuickSortRecursive(unsorted, startHead, head -1 ); //left side of pivot new sub array sent in
             QuickSortRecursive(unsorted, tail + 1, startTail); //right side of pivot. new subarray is sent in
             return unsorted;
+        }
+
+        private int GetMedianOfThree(int[] unsorted, int startHead, int startTail)
+        {
+            int first = unsorted[startHead];
+            int middle = unsorted[(startHead + startTail) / 2];
+            int last = unsorted[startTail];
+     
+            if (first > middle)
+            {
+                if (middle > last)
+                    return middle;  // first > middle > last 
+                else if (first > last)
+                    return last;    // first > last > middle
+                else
+                    return first;   // last > first > middle
+            }
+            else
+            {
+                if (first > last)
+                    return first;   // middle > first > last
+                else if (middle > last)
+                    return last;    // middle > last > first
+                else
+                    return middle;  // last > middle > first
+            }
         }
     }
 }

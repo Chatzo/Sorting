@@ -1,11 +1,11 @@
-﻿using Sorting_algo;
+﻿using Sorting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sorting_algo_Tests
+namespace Sorting_Tests
 {
     public class MergeSortTest : BaseSortTest
     {
@@ -90,7 +90,7 @@ namespace Sorting_algo_Tests
         [InlineData(100000)]
         protected void MergeSort_MinMaxArray_Test(int arraySize)
         {
-            RandomArray_Test(arraySize, int.MinValue, int.MaxValue);
+            MinMaxArray_Test(arraySize);
         }
     }
 }

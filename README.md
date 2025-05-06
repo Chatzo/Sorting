@@ -1,5 +1,5 @@
 # Sorting_algo
-Creating a few sorting algorithms with Test driven development
+A few sorting algorithms created with test driven development.
 
 - BubbleSort
 - HeapSort
